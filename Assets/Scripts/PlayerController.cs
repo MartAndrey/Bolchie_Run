@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //Variables que son igualadas a los parametros del control de animador 
+    //Variables that are set equal to the parameters of the animator control
     const string STATE_ALIVE = "isAlive";
     const string STATE_ON_THE_GROUND = "isOnTheGround";
+    const string STATE_IS_FALLING = "isFalling";
 
     // Force with which the player jumps
     public float jumpForce = 50f;
 
     //Lightning distance to detect if we are touching the ground
-    public float rayDistance = 1.8f;
+    public float rayDistance = 3.5f;
 
     //Soil defining layer
     public LayerMask groundMask;
 
     // Component responsible for responding to and handling physics
     Rigidbody2D rigidBody;
-    
+
     //Get the player animator
     Animator animator;
 
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool(STATE_ALIVE, true);
         animator.SetBool(STATE_ON_THE_GROUND, true);
+        animator.SetBool(STATE_IS_FALLING, true);
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool(STATE_ON_THE_GROUND, IsTouchingTheGround());
+        animator.SetBool(STATE_IS_FALLING, IsFalling());
 
 
         //--------------------------------------------------------------------------------------------//
@@ -73,4 +76,7 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
+ 
+    //Method to detect that the player is falling or not 
+    bool IsFalling() => rigidBody.velocity.y < 0; 
 }
