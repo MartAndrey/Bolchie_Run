@@ -382,7 +382,7 @@ Animator:
   m_GameObject: {fileID: 1157554332}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69b3549200d61b748919862b61c4d5c8, type: 2}
+  m_Controller: {fileID: 9100000, guid: a1ad54eab55ed6e41b61a658b3e00c06, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -472,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 50
+  speed: 10
   rayDistance: 3.5
   groundMask:
     serializedVersion: 2
