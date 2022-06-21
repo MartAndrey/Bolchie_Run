@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Singleton PlayerController
+    public static PlayerController sharedInstancePC;
+
     //Variables that are set equal to the parameters of the animator control
     const string STATE_ALIVE = "isAlive";
     const string STATE_ON_THE_GROUND = "isOnTheGround";
@@ -34,6 +37,11 @@ public class PlayerController : MonoBehaviour
     // Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
+        if (sharedInstancePC == null)
+        {
+            sharedInstancePC = this;
+        }
+
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
@@ -87,13 +95,13 @@ public class PlayerController : MonoBehaviour
 
         rigidBody.velocity = new Vector2(speed * horizontalAxis, rigidBody.velocity.y);
 
-        if(horizontalAxis < 0)
+        if (horizontalAxis < 0)
         {
-            spriteRender.flipX = true;           
+            spriteRender.flipX = true;
         }
-        else if(horizontalAxis > 0)
+        else if (horizontalAxis > 0)
         {
-            spriteRender.flipX = false;           
+            spriteRender.flipX = false;
         }
     }
 

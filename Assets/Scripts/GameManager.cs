@@ -10,6 +10,18 @@ public class GameManager : MonoBehaviour
     //Current game state and the game starts in the menu
     public GameState currentGameState = GameState.menu;
 
+    //Singleton GameManager
+    public static GameManager sharedInstanceGM;
+
+    //// Awake is called at the start of the first frame and before the Start method
+    void Awake()
+    {
+        if (sharedInstanceGM == null)
+        {
+            sharedInstanceGM = this;  
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
