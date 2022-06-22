@@ -63,10 +63,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_IS_FALLING, IsFalling());
         animator.SetBool(STATE_IS_MOVING, IsMoving());
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
+
 
 
         //--------------------------------------------------------------------------------------------//
@@ -82,7 +83,7 @@ public class PlayerController : MonoBehaviour
     //Player Jump method
     void Jump()
     {
-        if (IsTouchingTheGround())
+        if (IsTouchingTheGround() && GameManager.sharedInstanceGM.currentGameState == GameState.InGame) //If the player is touching the ground and "GameState" is "InGame", the player will be able to jump
         {
             rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
