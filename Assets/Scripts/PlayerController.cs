@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     const string STATE_IS_FALLING = "isFalling";
     const string STATE_IS_MOVING = "isMoving";
 
+    //Variable to save the initial position of the player
+    Vector3 startPosition;
+
     // Force with which the player jumps
     public float jumpForce = 50f;
 
@@ -54,6 +57,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_ON_THE_GROUND, true);
         animator.SetBool(STATE_IS_FALLING, true);
         animator.SetBool(STATE_IS_MOVING, true);
+
+        startPosition = this.transform.position; //Save current player position 
     }
 
     // Update is called once per frame
@@ -63,7 +68,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_IS_FALLING, IsFalling());
         animator.SetBool(STATE_IS_MOVING, IsMoving());
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))    
         {
             Jump();
         }
@@ -78,6 +83,13 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+    }
+
+    //The method is responsible for resetting the player's position
+    public void StrartGame()
+    {
+        this.transform.position = startPosition;
+        this.rigidBody.velocity = Vector2.zero;
     }
 
     //Player Jump method

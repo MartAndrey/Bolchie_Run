@@ -13,19 +13,22 @@ public class GameManager : MonoBehaviour
     //Singleton GameManager
     public static GameManager sharedInstanceGM;
 
+    //Reference to PlayerController
+    PlayerController controller;
+
     //// Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
         if (sharedInstanceGM == null)
         {
-            sharedInstanceGM = this;  
+            sharedInstanceGM = this;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        controller = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -35,12 +38,12 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        else 
+        else
         {
             Time.timeScale = 0;
         }
 
-        if (Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Submit") && currentGameState != GameState.InGame)
         {
             StartGame();
         }
@@ -73,7 +76,7 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.InGame)
         {
-            //TODO: Set the scene to play
+            controller.StrartGame(); 
         }
         else if (newGameState == GameState.GameOver)
         {
