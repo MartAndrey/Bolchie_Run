@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    //It is the objective that the camera has to follow
-    public Transform tarjet;
+    Rigidbody2D rb;
 
-    //Target Tracking Distance
-    public Vector3 offset = new Vector3(0.2f, 0f, -10f);
-
-    //Damping time with which the camera moves
-    public float dampingTime = 0.3f;
-
-    //Camera speed
-    public Vector3 velocity = Vector3.zero;
+    public float runningSpeed = 4f;
 
     void Awake()
     {
-        Application.targetFrameRate = 60;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -30,25 +22,15 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveCamera(true);
+
     }
 
-    public void ResetCameraPosition()
+    void FixedUpdate()
     {
-        MoveCamera(false);
-    }
-
-    void MoveCamera(bool smooth)
-    {
-        Vector3 destination = new Vector3(tarjet.position.x - offset.x, offset.y, offset.z);
-
-        if (smooth)
+        if (rb.velocity.x < runningSpeed)
         {
-            this.transform.position = Vector3.SmoothDamp(this.transform.position, destination, ref velocity, dampingTime);
-        }
-        else
-        {
-            this.transform.position = destination;
+            rb.velocity = new Vector2(runningSpeed, rb.velocity.y);
         }
     }
 }
+
