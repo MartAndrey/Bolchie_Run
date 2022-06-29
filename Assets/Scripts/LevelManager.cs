@@ -90,12 +90,22 @@ public class LevelManager : MonoBehaviour
     //Method in charge of eliminating the blocks of the game
     public void RemoveLevelBlock()
     {
+        //Save the block to be destroyed
+        LevelBlock oldBlock = currentLevelBlocks[0];
 
+        //We delete from the current list the block that we have previously saved "oldBlock"
+        currentLevelBlocks.Remove(oldBlock);
+
+        //We destroy the instance of that block
+        Destroy(oldBlock.gameObject);
     }
 
     //Method in charge of eliminating all the blocks of the game
     public void RemoveAllLevelBlocks()
     {
-
+        while(currentLevelBlocks.Count > 0)
+        {
+            RemoveLevelBlock();
+        }
     }
 }

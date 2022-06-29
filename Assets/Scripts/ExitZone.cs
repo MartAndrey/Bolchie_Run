@@ -19,6 +19,14 @@ public class ExitZone : MonoBehaviour
     //Override Trigger
     void OnTriggerEnter2D(Collider2D other)
     {
+        //look for a collision with the "Player" object and also with a "BoxCollider"
+        if (other.CompareTag("Player") && other.GetType() == typeof(BoxCollider2D))
+        {
+            //We add a new block to the scene
+            LevelManager.sharedInstanceLM.AddLevelBlock(); 
 
+            //We remove the first block added to the table.
+            LevelManager.sharedInstanceLM.RemoveLevelBlock(); 
+        }
     }
 }
