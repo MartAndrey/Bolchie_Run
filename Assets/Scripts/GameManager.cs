@@ -11,17 +11,17 @@ public class GameManager : MonoBehaviour
     public GameState currentGameState = GameState.Menu;
 
     //Singleton GameManager
-    public static GameManager sharedInstanceGM;
+    public static GameManager sharedInstance;
 
     //Reference to PlayerController
     PlayerController controller;
 
-    //// Awake is called at the start of the first frame and before the Start method
+    //Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
-        if (sharedInstanceGM == null)
+        if (sharedInstance == null)
         {
-            sharedInstanceGM = this;
+            sharedInstance = this;
         }
     }
 
@@ -76,7 +76,13 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.InGame)
         {
-            controller.StrartGame(); 
+            LevelManager.sharedInstance.RemoveAllLevelBlocks(); //Remove the blocks from the scene in case there are
+
+            LevelManager.sharedInstance.GenerateInitialBlocks(); //Generate the initial blocks of the scene
+
+            CameraFollow.sharedInstance.ResetPosition(); //Reset camera position
+
+            controller.StartGame(); 
         }
         else if (newGameState == GameState.GameOver)
         {

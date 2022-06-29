@@ -23,10 +23,10 @@ public class ExitZone : MonoBehaviour
         if (other.CompareTag("Player") && other.GetType() == typeof(BoxCollider2D))
         {
             //We add a new block to the scene
-            LevelManager.sharedInstanceLM.AddLevelBlock(); 
+            LevelManager.sharedInstance.AddLevelBlock(); 
 
             //We remove the first block added to the table.
-            LevelManager.sharedInstanceLM.RemoveLevelBlock(); 
+            LevelManager.sharedInstance.RemoveLevelBlock(); 
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //Singleton PlayerController
-    public static PlayerController sharedInstancePC;
+    public static PlayerController sharedInstance;
 
     //Variables that are set equal to the parameters of the animator control
     const string STATE_ALIVE = "isAlive";
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     //Soil defining layer
     public LayerMask groundMask;
 
-    // Component responsible for responding to and handling physics
+    //Component responsible for responding to and handling physics
     Rigidbody2D rigidBody;
 
     //Get the player animator
@@ -40,9 +40,9 @@ public class PlayerController : MonoBehaviour
     // Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
-        if (sharedInstancePC == null)
+        if (sharedInstance == null)
         {
-            sharedInstancePC = this;
+            sharedInstance = this;
         }
 
         rigidBody = GetComponent<Rigidbody2D>();
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //The method is responsible for resetting the player's position
-    public void StrartGame()
+    public void StartGame()
     {
         this.transform.position = startPosition;
         this.rigidBody.velocity = Vector2.zero;
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     //Player Jump method
     void Jump()
     {
-        if (IsTouchingTheGround() && GameManager.sharedInstanceGM.currentGameState == GameState.InGame) //If the player is touching the ground and "GameState" is "InGame", the player will be able to jump
+        if (IsTouchingTheGround() && GameManager.sharedInstance.currentGameState == GameState.InGame) //If the player is touching the ground and "GameState" is "InGame", the player will be able to jump
         {
             rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }

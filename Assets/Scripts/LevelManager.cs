@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     //Singleton
-    public static LevelManager sharedInstanceLM;
+    public static LevelManager sharedInstance;
 
     //List containing all "Level Blocks"
     public List<LevelBlock> allTheLevelBlocks = new List<LevelBlock>();
@@ -18,9 +18,9 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        if (sharedInstanceLM == null)
+        if (sharedInstance == null)
         {
-            sharedInstanceLM = this;
+            sharedInstance = this;
         }
     }
 
