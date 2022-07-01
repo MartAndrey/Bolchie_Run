@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //All states of the game.
-public enum GameState { Menu, InGame, GameOver }
+public enum GameState { Menu, InGame, GameOver, Pause }
 
 public class GameManager : MonoBehaviour
 {
@@ -34,18 +34,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentGameState == GameState.InGame)// if the game state is other than "InGame", the game will be paused
+        if (currentGameState == GameState.InGame)
         {
             Time.timeScale = 1;
         }
         else
         {
             Time.timeScale = 0;
-        }
-
-        if (Input.GetButtonDown("Submit") && currentGameState != GameState.InGame)
-        {
-            StartGame();
         }
     }
 
@@ -65,34 +60,60 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         SetGameState(GameState.GameOver);
-    }   
+    }
+
+    public void Pause()
+    {
+        SetGameState(GameState.Pause);
+    }
 
     //Method responsible for modifying the current state of the game
     void SetGameState(GameState newGameState)
     {
         if (newGameState == GameState.Menu)
         {
-            MenuManager.sharedInstance.HideGameMenu(); 
-            
+            MenuManager.sharedInstance.HideGameMenu();
+
+            MenuManager.sharedInstance.ShowDeathMenu();
+
             MenuManager.sharedInstance.ShowMainMenu();
         }
         else if (newGameState == GameState.InGame)
         {
+            controller.StartGame();
+
             LevelManager.sharedInstance.RemoveAllLevelBlocks(); //Remove the blocks from the scene in case there are
 
             LevelManager.sharedInstance.GenerateInitialBlocks(); //Generate the initial blocks of the scene
 
             CameraFollow.sharedInstance.ResetPosition(); //Reset camera position
 
-            controller.StartGame(); 
+            MenuManager.sharedInstance.HideMainMenu();
 
-            MenuManager.sharedInstance.HideMainMenu(); 
+            MenuManager.sharedInstance.HideDeathMenu();
 
-            MenuManager.sharedInstance.ShowGameMenu(); 
+            MenuManager.sharedInstance.ShowGameMenu();
         }
         else if (newGameState == GameState.GameOver)
         {
-            MenuManager.sharedInstance.HideGameMenu(); 
+            MenuManager.sharedInstance.HideGameMenu();
+
+            MenuManager.sharedInstance.HideGameMenu();
+
+            MenuManager.sharedInstance.ShowDeathMenu();
+        }
+        else if (newGameState == GameState.Pause)
+        {
+           if(MenuManager.sharedInstance.pauseCanvas.enabled == false)
+            {
+                MenuManager.sharedInstance.pauseCanvas.enabled = true;
+            }
+            else
+            {
+                MenuManager.sharedInstance.pauseCanvas.enabled = false;
+
+                newGameState = GameState.InGame;
+            }
         }
 
         this.currentGameState = newGameState;

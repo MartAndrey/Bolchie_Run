@@ -6,9 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager sharedInstance;
 
-    public Canvas menuCanvas;
-
-    public Canvas gameCanvas;
+    public Canvas menuCanvas, gameCanvas, deathCanvas, pauseCanvas;
 
     void Awake()
     {
@@ -18,7 +16,12 @@ public class MenuManager : MonoBehaviour
         }
 
         gameCanvas.enabled = false;
+
+        deathCanvas.enabled = false;
+
+        pauseCanvas.enabled = false;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,10 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetButtonDown("Cancel"))
+        {
+            GameManager.sharedInstance.Pause();
+        }
     }
 
     public void ShowMainMenu()
@@ -49,6 +55,26 @@ public class MenuManager : MonoBehaviour
     public void HideGameMenu()
     {
         gameCanvas.enabled = false;
+    }
+
+    public void ShowDeathMenu()
+    {
+        deathCanvas.enabled = true;
+    }
+
+    public void HideDeathMenu()
+    {
+        deathCanvas.enabled = false;
+    }
+
+    public void ShowPauseMenu()
+    {
+        deathCanvas.enabled = true;
+    }
+
+    public void HidePauseMenu()
+    {
+        deathCanvas.enabled = false;
     }
 
     public void ExitGame()

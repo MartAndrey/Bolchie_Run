@@ -88,8 +88,16 @@ public class PlayerController : MonoBehaviour
     //The method is responsible for resetting the player's position
     public void StartGame()
     {
+        animator.SetBool(STATE_ALIVE, true);
+
+        Invoke("RestartPosition", 0.15f);  
+    }
+
+    void RestartPosition()
+    {
         this.transform.position = startPosition;
-        this.rigidBody.velocity = Vector2.zero;
+
+        this.rigidBody.velocity = Vector2.zero; 
     }
 
     //Player Jump method
@@ -116,6 +124,13 @@ public class PlayerController : MonoBehaviour
         {
             spriteRender.flipX = false;
         }
+    }
+
+    public void Dead()
+    {
+        animator.SetBool(STATE_ALIVE, false);
+
+        GameManager.sharedInstance.Invoke("GameOver", 1.2f);
     }
 
     //Method to detect if the player is on the ground or not
