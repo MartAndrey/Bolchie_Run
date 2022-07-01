@@ -55,24 +55,26 @@ public class GameManager : MonoBehaviour
         SetGameState(GameState.InGame);
     }
 
-    //Method in charge of finishing the game
-    public void GameOver()
-    {
-        SetGameState(GameState.GameOver);
-    }
-
     //Method in charge of returning to the menu
     public void BackToMenu()
     {
         SetGameState(GameState.Menu);
     }
 
+    //Method in charge of finishing the game
+    public void GameOver()
+    {
+        SetGameState(GameState.GameOver);
+    }   
+
     //Method responsible for modifying the current state of the game
     void SetGameState(GameState newGameState)
     {
         if (newGameState == GameState.Menu)
         {
-            //TODO: Set menu logic 
+            MenuManager.sharedInstance.HideGameMenu(); 
+            
+            MenuManager.sharedInstance.ShowMainMenu();
         }
         else if (newGameState == GameState.InGame)
         {
@@ -83,10 +85,14 @@ public class GameManager : MonoBehaviour
             CameraFollow.sharedInstance.ResetPosition(); //Reset camera position
 
             controller.StartGame(); 
+
+            MenuManager.sharedInstance.HideMainMenu(); 
+
+            MenuManager.sharedInstance.ShowGameMenu(); 
         }
         else if (newGameState == GameState.GameOver)
         {
-            //TODO: Set the game to game over
+            MenuManager.sharedInstance.HideGameMenu(); 
         }
 
         this.currentGameState = newGameState;
