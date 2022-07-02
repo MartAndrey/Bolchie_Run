@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Cancel"))
+        if(Input.GetButtonDown("Cancel") && (GameManager.sharedInstance.currentGameState == GameState.InGame || GameManager.sharedInstance.currentGameState == GameState.Pause)) 
         {
             GameManager.sharedInstance.Pause();
         }
@@ -69,12 +69,12 @@ public class MenuManager : MonoBehaviour
 
     public void ShowPauseMenu()
     {
-        deathCanvas.enabled = true;
+        pauseCanvas.enabled = true;
     }
 
     public void HidePauseMenu()
     {
-        deathCanvas.enabled = false;
+        pauseCanvas.enabled = false;
     }
 
     public void ExitGame()

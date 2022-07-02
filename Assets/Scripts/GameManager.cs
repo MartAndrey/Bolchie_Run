@@ -74,7 +74,9 @@ public class GameManager : MonoBehaviour
         {
             MenuManager.sharedInstance.HideGameMenu();
 
-            MenuManager.sharedInstance.ShowDeathMenu();
+            MenuManager.sharedInstance.HideDeathMenu();
+
+            MenuManager.sharedInstance.HidePauseMenu();
 
             MenuManager.sharedInstance.ShowMainMenu();
         }
