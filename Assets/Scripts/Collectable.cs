@@ -6,7 +6,7 @@ public enum CollectableType { HealthPotion, ManaPotion, Money }
 
 public class Collectable : MonoBehaviour
 {
-    public CollectableType type = CollectableType.Money; 
+    public CollectableType type = CollectableType.Money;
 
     SpriteRenderer sprite;
 
@@ -56,14 +56,14 @@ public class Collectable : MonoBehaviour
                 break;
 
             case CollectableType.Money:
-
+                GameManager.sharedInstance.CollectObject(this);
                 break;
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasBeenCollected)
         {
             Collect();
         }

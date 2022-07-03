@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     //Reference to PlayerController
     PlayerController controller;
 
+    public int collectedObject = 0;
+
     //Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
@@ -119,5 +121,10 @@ public class GameManager : MonoBehaviour
         }
 
         this.currentGameState = newGameState;
+    }
+
+    public void CollectObject(Collectable collectable)
+    {
+        collectedObject += collectable.value;
     }
 }
