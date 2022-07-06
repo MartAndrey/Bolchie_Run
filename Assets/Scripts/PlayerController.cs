@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     const string STATE_IS_FALLING = "isFalling";
     const string STATE_IS_MOVING = "isMoving";
 
+    int healthPoints, manaPoints;
+
+    public const int INITIAL_HEALTH = 100, MAX_HEATH = 200, MIN_HEALTH = 10,    
+                     INITIAL_MANA = 15,    MAX_MANA = 30,   MIN_MANA = 0;
+
     //Variable to save the initial position of the player
     Vector3 startPosition;
 
@@ -58,7 +63,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_IS_FALLING, true);
         animator.SetBool(STATE_IS_MOVING, true);
 
-        startPosition = this.transform.position; //Save current player position 
+        startPosition = this.transform.position; //Save current player position
+
+        healthPoints = INITIAL_HEALTH;
+        manaPoints = INITIAL_MANA;
     }
 
     // Update is called once per frame
@@ -68,7 +76,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_IS_FALLING, IsFalling());
         animator.SetBool(STATE_IS_MOVING, IsMoving());
 
-        if (Input.GetButtonDown("Jump"))    
+        if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
@@ -90,14 +98,14 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool(STATE_ALIVE, true);
 
-        Invoke("RestartPosition", 0.15f);  
+        Invoke("RestartPosition", 0.15f);
     }
 
     void RestartPosition()
     {
         this.transform.position = startPosition;
 
-        this.rigidBody.velocity = Vector2.zero; 
+        this.rigidBody.velocity = Vector2.zero;
     }
 
     //Player Jump method
@@ -151,4 +159,34 @@ public class PlayerController : MonoBehaviour
 
     //Method to detect if the player is moving or not
     bool IsMoving() => rigidBody.velocity.x != 0;
+
+    public void CollectHealth(int points)
+    {
+        this.healthPoints += points;
+
+        if (this.healthPoints >= MAX_HEATH)
+        {
+            this.healthPoints = MAX_HEATH;
+        }
+    }
+
+    public void CollectMana(int points)
+    {
+        this.manaPoints += points;
+
+        if (this.manaPoints >= MAX_MANA)
+        {
+            this.manaPoints = MAX_MANA;
+        }
+    }
+
+    public int GetHealth()
+    {
+        return healthPoints;
+    }
+
+    public int GetMana()
+    {
+        return manaPoints;
+    }
 }
