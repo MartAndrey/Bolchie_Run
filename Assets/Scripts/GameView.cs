@@ -19,8 +19,8 @@ public class GameView : MonoBehaviour
         if (GameManager.sharedInstance.currentGameState == GameState.InGame)
         {
             int coins = GameManager.sharedInstance.collectedObject;
-            float score = 0;
-            float highScore = 0;
+            float score = PlayerController.sharedInstance.GetTravelledDistance();
+            float highScore = PlayerPrefs.GetFloat("High Score", 0);
 
             coinsText.text = coins.ToString();
             scoreText.text = score.ToString("f1");

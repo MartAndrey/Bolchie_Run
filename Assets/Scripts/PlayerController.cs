@@ -139,6 +139,14 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(STATE_ALIVE, false);
 
         GameManager.sharedInstance.Invoke("GameOver", 1.2f);
+
+        float traveledDistance = GetTravelledDistance();
+        float previousHighDistance = PlayerPrefs.GetFloat("High Score", 0f);
+
+        if (traveledDistance > previousHighDistance)
+        {
+            PlayerPrefs.SetFloat("High Score", traveledDistance);
+        }
     }
 
     //Method to detect if the player is on the ground or not
@@ -188,5 +196,10 @@ public class PlayerController : MonoBehaviour
     public int GetMana()
     {
         return manaPoints;
+    }
+
+    public float GetTravelledDistance()
+    {
+        return this.transform.position.x - startPosition.x; 
     }
 }
