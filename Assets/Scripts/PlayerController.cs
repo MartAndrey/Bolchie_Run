@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public const int INITIAL_HEALTH = 100, MAX_HEATH = 200, MIN_HEALTH = 10,    
                      INITIAL_MANA = 15,    MAX_MANA = 30,   MIN_MANA = 0;
 
+    public const int SUPERJUMP_COST = 5;
+    public const float SUPERJUMP_FORCE = 1.2f;
+
     //Variable to save the initial position of the player
     Vector3 startPosition;
 
@@ -78,9 +81,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Jump();
+            Jump(false);
         }
 
+        if (Input.GetButtonDown("Super Jump"))
+        {
+            Jump(true); 
+        }
 
 
         //--------------------------------------------------------------------------------------------//
@@ -109,11 +116,19 @@ public class PlayerController : MonoBehaviour
     }
 
     //Player Jump method
-    void Jump()
+    void Jump(bool superJump)
     {
+        float jumpForceFactor = jumpForce;
+
+        if (superJump && manaPoints >= SUPERJUMP_COST && IsTouchingTheGround())
+        {
+            manaPoints -= SUPERJUMP_COST;
+            jumpForceFactor *= SUPERJUMP_FORCE;
+        }
+
         if (IsTouchingTheGround() && GameManager.sharedInstance.currentGameState == GameState.InGame) //If the player is touching the ground and "GameState" is "InGame", the player will be able to jump
         {
-            rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rigidBody.AddForce(Vector2.up * jumpForceFactor, ForceMode2D.Impulse);
         }
     }
 
