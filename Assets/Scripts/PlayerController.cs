@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //Method to detect if the player is on the ground or not
-    bool IsTouchingTheGround()
+    public bool IsTouchingTheGround()
     {
         if (Physics2D.Raycast(this.transform.position, Vector2.down, rayDistance, groundMask))
         {
