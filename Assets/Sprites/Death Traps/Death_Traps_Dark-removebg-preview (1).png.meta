@@ -1,0 +1,904 @@
+fileFormatVersion: 2
+guid: 4fa7358efcbb29c48af68fcccb5cd0b1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 374
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0928c100f90920e45b67597cd99378ff
+      internalID: 2134655907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 382
+        width: 119
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9942c604fdb3e9a41b26e2a5589fcc35
+      internalID: -1562801662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 376
+        width: 118
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74f8993973d84a4387dce5d9cb4bbe1
+      internalID: 84761237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_3
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 383
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8028d1406faa1c849a12053fec61e780
+      internalID: -980555347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_4
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 455
+        width: 53
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31543bef585690419adee3f12a0fd47
+      internalID: 356651215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 263
+        width: 115
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c99b59218915846b5ec7c45dc3953d
+      internalID: -413636546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_6
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 262
+        width: 123
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fecae1f8b62794b9b6f5f071871729
+      internalID: -1934818204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 368
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af063b37fdb6f414e92ca411f6e12af6
+      internalID: -1777123516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 271
+        width: 119
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d575125788557194cbd4ea13fae0cb77
+      internalID: -1285848350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_9
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 308
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41fbbce4965fe54ca4574c3ee7b498b
+      internalID: -470038822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 141
+        width: 117
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63926ec1ba3ecc4e8b356d526b937e8
+      internalID: -791029031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 229
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb909e6a63659ee4a8d980727779624c
+      internalID: 954913848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 170
+        width: 75
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef7aa07d10ff404c9ba55cec908a1c5
+      internalID: -530193089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_13
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 132
+        width: 7
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a23f27905bff9146b09bef284a865d6
+      internalID: -310669172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_14
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 131
+        width: 4
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab414797d28c0134a84fb228706d6fe2
+      internalID: -1808541310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_15
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 130
+        width: 6
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2ebd9616a26dc4384813846c11d88d
+      internalID: 1152442950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_16
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 131
+        width: 8
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9de91d1919bbe40bc38436dc3f8d71
+      internalID: -940201655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_17
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 130
+        width: 12
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b52f397c27fd1b4aa061c824493456c
+      internalID: 1980897879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_18
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 162
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b52ae612a1056b40b71a3d0ffe1e559
+      internalID: 2045203609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 179
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bdb19d01a18ab4fa53d8a38dac0e6a
+      internalID: -395673905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_20
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 169
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93481688168a1a14d892b6d1f2fe63aa
+      internalID: 2085067466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_21
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 165
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143fd9df418550c4aa713e88988a994d
+      internalID: -182345622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_22
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 150
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21e90dbb994ec0419e01d11914592c5
+      internalID: 782411265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_23
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 93
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc740becf1a379409de14191078da90
+      internalID: 1368530812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 17
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f957700a069af41bb0811cee047fc9
+      internalID: -1379663078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_25
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 4
+        width: 116
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c625f41de447e464a8ca9cea56a06815
+      internalID: 1524404325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_26
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 89
+        width: 56
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03863afc659d1241ab82724d360c46a
+      internalID: 1656108135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_27
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 89
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49922bbe2e3cb2479f02c8fd123c16c
+      internalID: -224836517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_28
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 78
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7524694c3abd54f833d2ccaaa03a8d
+      internalID: 981327264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_29
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 87
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce048d18979de449b07953dd33810c9
+      internalID: 2140135750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_30
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 2
+        width: 16
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f36cae4ea9311b488cb63436a899414
+      internalID: -2023632515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 4
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f2944acc46b9049b838c5de5e9d872
+      internalID: 1299871488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_32
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 6
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9188edd0052caf748bdda1910f577ef6
+      internalID: -1101301275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 43
+        width: 126
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece2d9822e41c5647a4a9c7dcf030a35
+      internalID: -1228036933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Traps_Dark-removebg-preview (1)_34
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 11
+        width: 46
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f802d152ea29f4ea452b428198c592
+      internalID: 1373757517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Death_Traps_Dark-removebg-preview (1)_28: 981327264
+      Death_Traps_Dark-removebg-preview (1)_21: -182345622
+      Death_Traps_Dark-removebg-preview (1)_17: 1980897879
+      Death_Traps_Dark-removebg-preview (1)_5: -413636546
+      Death_Traps_Dark-removebg-preview (1)_31: 1299871488
+      Death_Traps_Dark-removebg-preview (1)_20: 2085067466
+      Death_Traps_Dark-removebg-preview (1)_24: -1379663078
+      Death_Traps_Dark-removebg-preview (1)_27: -224836517
+      Death_Traps_Dark-removebg-preview (1)_3: -980555347
+      Death_Traps_Dark-removebg-preview (1)_11: 954913848
+      Death_Traps_Dark-removebg-preview (1)_13: -310669172
+      Death_Traps_Dark-removebg-preview (1)_26: 1656108135
+      Death_Traps_Dark-removebg-preview (1)_0: 2134655907
+      Death_Traps_Dark-removebg-preview (1)_12: -530193089
+      Death_Traps_Dark-removebg-preview (1)_16: -940201655
+      Death_Traps_Dark-removebg-preview (1)_18: 2045203609
+      Death_Traps_Dark-removebg-preview (1)_6: -1934818204
+      Death_Traps_Dark-removebg-preview (1)_19: -395673905
+      Death_Traps_Dark-removebg-preview (1)_22: 782411265
+      Death_Traps_Dark-removebg-preview (1)_15: 1152442950
+      Death_Traps_Dark-removebg-preview (1)_25: 1524404325
+      Death_Traps_Dark-removebg-preview (1)_2: 84761237
+      Death_Traps_Dark-removebg-preview (1)_4: 356651215
+      Death_Traps_Dark-removebg-preview (1)_8: -1285848350
+      Death_Traps_Dark-removebg-preview (1)_14: -1808541310
+      Death_Traps_Dark-removebg-preview (1)_10: -791029031
+      Death_Traps_Dark-removebg-preview (1)_32: -1101301275
+      Death_Traps_Dark-removebg-preview (1)_7: -1777123516
+      Death_Traps_Dark-removebg-preview (1)_33: -1228036933
+      Death_Traps_Dark-removebg-preview (1)_23: 1368530812
+      Death_Traps_Dark-removebg-preview (1)_1: -1562801662
+      Death_Traps_Dark-removebg-preview (1)_34: 1373757517
+      Death_Traps_Dark-removebg-preview (1)_9: -470038822
+      Death_Traps_Dark-removebg-preview (1)_29: 2140135750
+      Death_Traps_Dark-removebg-preview (1)_30: -2023632515
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Potion
   - Platform Moving
+  - Trap
   layers:
   - Default
   - TransparentFX

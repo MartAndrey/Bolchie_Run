@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     const string STATE_IS_FALLING = "isFalling";
     const string STATE_IS_MOVING = "isMoving";
 
-    int healthPoints, manaPoints;
+    [SerializeField] int healthPoints, manaPoints;
 
     public const int INITIAL_HEALTH = 100, MAX_HEATH = 200, MIN_HEALTH = 10,    
                      INITIAL_MANA = 15,    MAX_MANA = 30,   MIN_MANA = 0;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     //Component responsible for responding to and handling physics
-    Rigidbody2D rigidBody;
+    public Rigidbody2D rigidBody;
 
     //Get the player animator
     Animator animator;
@@ -190,6 +190,11 @@ public class PlayerController : MonoBehaviour
         if (this.healthPoints >= MAX_HEATH)
         {
             this.healthPoints = MAX_HEATH;
+        }
+        
+        if (this.healthPoints <= 0)
+        {
+            Dead();
         }
     }
 
