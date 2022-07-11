@@ -72,8 +72,12 @@ public class GameManager : MonoBehaviour
     //Method responsible for modifying the current state of the game
     void SetGameState(GameState newGameState)
     {
+        GameObject soundBackground = GameObject.Find("Sound Background");
+
         if (newGameState == GameState.Menu)
         {
+            soundBackground.GetComponent<AudioSource>().Pause();
+
             MenuManager.sharedInstance.HideGameMenu();
 
             MenuManager.sharedInstance.HideDeathMenu();
@@ -85,6 +89,8 @@ public class GameManager : MonoBehaviour
         else if (newGameState == GameState.InGame)
         {
             controller.StartGame();
+
+            soundBackground.GetComponent<AudioSource>().Play();
 
             LevelManager.sharedInstance.RemoveAllLevelBlocks(); //Remove the blocks from the scene in case there are
 
@@ -100,6 +106,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.GameOver)
         {
+            soundBackground.GetComponent<AudioSource>().Pause();
+
             MenuManager.sharedInstance.HideGameMenu();
 
             MenuManager.sharedInstance.HideGameMenu();
@@ -108,8 +116,10 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.Pause)
         {
-           if(MenuManager.sharedInstance.pauseCanvas.enabled == false)
+            if (MenuManager.sharedInstance.pauseCanvas.enabled == false)
             {
+                soundBackground.GetComponent<AudioSource>().Pause();
+
                 MenuManager.sharedInstance.pauseCanvas.enabled = true;
             }
             else
@@ -117,6 +127,8 @@ public class GameManager : MonoBehaviour
                 MenuManager.sharedInstance.pauseCanvas.enabled = false;
 
                 newGameState = GameState.InGame;
+
+                soundBackground.GetComponent<AudioSource>().Play();
             }
         }
 
