@@ -14,7 +14,13 @@ public class CameraFollow : MonoBehaviour
     Rigidbody2D rb;
 
     //Speed ​​with which the camera moves
-    public float runningSpeed = 4f;
+    public float runningSpeed = 3f;
+
+    float _increaseSpeed = 0.5f;
+
+    float _distanceToSpeedUpMax = 10;
+
+    float _distanceToSpeedUp = 0;
 
     //Awake is called at the start of the first frame and before the Start method
     void Awake()
@@ -27,16 +33,14 @@ public class CameraFollow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        _distanceToSpeedUp += Time.deltaTime;
+    }
     //Start is called before the first frame update
     void Start()
     {
         startPosition = this.transform.position;
-    }
-
-    //Update is called once per frame
-    void Update()
-    {
-
     }
 
     //It is called every fixed frame-rate frame
@@ -46,12 +50,28 @@ public class CameraFollow : MonoBehaviour
         {
             rb.velocity = new Vector2(runningSpeed, rb.velocity.y);
         }
+
+        if (_distanceToSpeedUp >= _distanceToSpeedUpMax)
+        {
+            IncreaseSpeed();
+
+            _distanceToSpeedUp = 0;
+        }
     }
 
     //Method that is responsible for resetting the position of the camera
-    public void ResetPosition()
+    public void ResetCamera()
     {
         this.transform.position = startPosition;
+
+        runningSpeed = 3;
+
+        _distanceToSpeedUp = 0;
+    }
+
+    void IncreaseSpeed()
+    {
+        runningSpeed += _increaseSpeed;
     }
 }
 

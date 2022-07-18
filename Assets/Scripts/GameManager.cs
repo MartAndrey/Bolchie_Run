@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
 
             LevelManager.sharedInstance.GenerateInitialBlocks(); //Generate the initial blocks of the scene
 
-            CameraFollow.sharedInstance.ResetPosition(); //Reset camera position
+            CameraFollow.sharedInstance.ResetCamera(); //Reset camera position
 
             MenuManager.sharedInstance.HideMainMenu();
 

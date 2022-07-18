@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] int healthPoints, manaPoints;
 
-    public const int INITIAL_HEALTH = 100, MAX_HEATH = 200, MIN_HEALTH = 10,    
-                     INITIAL_MANA = 15,    MAX_MANA = 30,   MIN_MANA = 0;
+    public const int INITIAL_HEALTH = 100, MAX_HEATH = 200, MIN_HEALTH = 10,
+                     INITIAL_MANA = 15, MAX_MANA = 30, MIN_MANA = 0;
 
     public const int SUPERJUMP_COST = 5;
     public const float SUPERJUMP_FORCE = 1.2f;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Super Jump"))
         {
-            Jump(true); 
+            Jump(true);
         }
 
 
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(this.transform.position, Vector2.down * rayDistance, Color.white);
     }
 
+    #region Restore Player Position
     //It is called every fixed frame-rate frame
     void FixedUpdate()
     {
@@ -114,6 +115,9 @@ public class PlayerController : MonoBehaviour
 
         this.rigidBody.velocity = Vector2.zero;
     }
+    #endregion Restore Player Position
+
+    #region Player Jump
 
     //Player Jump method
     void Jump(bool superJump)
@@ -131,7 +135,9 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(Vector2.up * jumpForceFactor, ForceMode2D.Impulse);
         }
     }
+    #endregion Player Jump
 
+    #region  Player Move
     //Player Movement Method
     void Move()
     {
@@ -148,7 +154,9 @@ public class PlayerController : MonoBehaviour
             spriteRender.flipX = false;
         }
     }
+    #endregion Player Move
 
+    #region Plyer Dead
     public void Dead()
     {
         animator.SetBool(STATE_ALIVE, false);
@@ -163,7 +171,9 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.SetFloat("High Score", traveledDistance);
         }
     }
+    #endregion Plyer Dead
 
+    #region Validation methods
     //Method to detect if the player is on the ground or not
     public bool IsTouchingTheGround()
     {
@@ -182,7 +192,9 @@ public class PlayerController : MonoBehaviour
 
     //Method to detect if the player is moving or not
     bool IsMoving() => rigidBody.velocity.x != 0;
+    #endregion Validation methods
 
+    #region Collectables
     public void CollectHealth(int points)
     {
         this.healthPoints += points;
@@ -191,7 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             this.healthPoints = MAX_HEATH;
         }
-        
+
         if (this.healthPoints <= 0)
         {
             Dead();
@@ -220,6 +232,7 @@ public class PlayerController : MonoBehaviour
 
     public float GetTravelledDistance()
     {
-        return this.transform.position.x - startPosition.x; 
+        return this.transform.position.x - startPosition.x;
     }
+    #endregion Collectables
 }
