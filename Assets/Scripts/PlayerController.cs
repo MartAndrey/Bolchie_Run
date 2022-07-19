@@ -68,8 +68,7 @@ public class PlayerController : MonoBehaviour
 
         startPosition = this.transform.position; //Save current player position
 
-        healthPoints = INITIAL_HEALTH;
-        manaPoints = INITIAL_MANA;
+        RestartHealthMana();
     }
 
     // Update is called once per frame
@@ -94,19 +93,27 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(this.transform.position, Vector2.down * rayDistance, Color.white);
     }
 
-    #region Restore Player Position
     //It is called every fixed frame-rate frame
     void FixedUpdate()
     {
         Move();
     }
 
+    #region Restore Player Position
     //The method is responsible for resetting the player's position
     public void StartGame()
     {
         animator.SetBool(STATE_ALIVE, true);
 
         Invoke("RestartPosition", 0.15f);
+
+        RestartHealthMana();
+    }
+
+    void RestartHealthMana()
+    {
+        healthPoints = INITIAL_HEALTH;
+        manaPoints = INITIAL_MANA;
     }
 
     void RestartPosition()

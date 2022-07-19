@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
         {
             controller.StartGame();
 
+            collectedObject = 0;
+
             soundBackground.GetComponent<AudioSource>().Play();
 
             LevelManager.sharedInstance.RemoveAllLevelBlocks(); //Remove the blocks from the scene in case there are
