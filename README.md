@@ -1,11 +1,12 @@
 #Bolchie Run 
+
 A video game developed in Unity 2D for the "C# Course for Video Games"
 
 **In this course we see**
 >-  Create a controller in 2D.
-- Master Unity 2D Animator.
-- Create a basic user interface.
-- Persistence data
+>- Master Unity 2D Animator.
+>- Create a basic user interface.
+>- Persistence data
 
 In this course I developed my first platform video game.
 
