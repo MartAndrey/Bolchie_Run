@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public int collectedObject = 0;
 
+    public AudioSource audioSource;
+
     //Awake is called at the start of the first frame and before the Start method
     void Awake()
     {
@@ -76,6 +78,8 @@ public class GameManager : MonoBehaviour
 
         if (newGameState == GameState.Menu)
         {
+            audioSource.Play();
+
             soundBackground.GetComponent<AudioSource>().Pause();
 
             MenuManager.sharedInstance.HideGameMenu();
@@ -88,6 +92,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.InGame)
         {
+            audioSource.Pause();
+
             controller.StartGame();
 
             collectedObject = 0;
@@ -108,6 +114,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.GameOver)
         {
+            audioSource.Pause();
+            
             soundBackground.GetComponent<AudioSource>().Pause();
 
             MenuManager.sharedInstance.HideGameMenu();
@@ -118,6 +126,8 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.Pause)
         {
+            audioSource.Pause();
+            
             if (MenuManager.sharedInstance.pauseCanvas.enabled == false)
             {
                 soundBackground.GetComponent<AudioSource>().Pause();
